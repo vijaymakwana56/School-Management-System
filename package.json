@@ -1,0 +1,26 @@
+{
+  "name": "educase",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/vijaymakwana56/School-Management-System#readme",
+  "bugs": {
+    "url": "https://github.com/vijaymakwana56/School-Management-System/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijaymakwana56/School-Management-System.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
