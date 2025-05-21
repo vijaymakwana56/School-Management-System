@@ -1,11 +1,10 @@
 const express = require("express");
+const schoolRoutes = require("./routes/schoolRoutes");
 
 const app = express();
 
-app.use('/', (req, res) =>{
-    res.send("this is homepage");
-});
+app.use('/', schoolRoutes);
 
 app.listen(8000, ()=>{
-    console.log("server running on port 3000");
+    console.log("server running on port 8000");
 });
