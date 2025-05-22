@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const schoolRoutes = require("./routes/schoolRoutes");
 
 const app = express();
@@ -7,6 +8,6 @@ app.use(express.urlencoded())
 // app.use(express.json());
 app.use('/', schoolRoutes);
 
-app.listen(8000, ()=>{
-    console.log("server running on port 8000");
+app.listen(process.env.PORT, ()=>{
+    console.log("server running on port", process.env.PORT);
 });
