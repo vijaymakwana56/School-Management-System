@@ -1,0 +1,82 @@
+# 🎓 School Management API
+
+This is a RESTful Node.js + Express.js API for managing school data. It allows users to add new schools and retrieve a list of schools sorted by proximity based on user-supplied coordinates.
+
+---
+
+## 📁 Project Structure
+
+educase/
+├── controllers/
+│ └── school.js # Controller functions for API logic
+├── routes/
+│ └── school.js # Express routes
+├── database.js # MySQL DB connection setup
+├── app.js # Entry point
+├── .env # Environment variables (not committed)
+├── package.json # Node dependencies
+└── README.md
+
+
+---
+
+## 🛠️ Technologies Used
+
+- Node.js
+- Express.js
+- MySQL (hosted via Railway)
+- MySQL2 Node.js driver
+- Nodemon (for local development)
+- Railway (free cloud hosting)
+- Postman (for API testing)
+
+---
+
+## 📌 Features
+
+- Add a new school (`POST /addSchool`)
+- Get a list of schools sorted by distance (`GET /listSchools`)
+- Distance sorting using Haversine formula
+
+---
+
+## 🔧 API Endpoints
+
+### 1. Add School
+
+- **Method**: `POST`
+- **URL**: `/addSchool`
+- **Payload**:
+
+x-www-form-urlencoded:
+  "name": "xyz high school",
+  "address": "123 street, ahmedabad",
+  "latitude": 14.0522,
+  "longitude": 72.2437
+
+
+Success Response:
+{
+  "message": "School added successfully!"
+}
+
+
+### 2. List School by Proximity
+
+- **Method**: `GET`
+- **URL**: `/listSchool?latitude=14.05&longitude=72.24`
+- **Payload**:
+
+
+Success Response:
+[
+  {
+    "id": 1,
+    "name": "xyz high school",
+    "address": "123 street, ahmedabad",
+    "latitude": 14.0522,
+    "longitude": 72.2437,
+    "distance": 0.468
+  }
+]
+

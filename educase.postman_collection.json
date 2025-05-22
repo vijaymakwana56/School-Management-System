@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "588c4f05-8e97-412c-b712-3d10ec456af9",
+		"name": "educase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40086168"
+	},
+	"item": [
+		{
+			"name": "https://school-management-system-production-4f0a.up.railway.app/addSchool",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "dps",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "amd",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "12.5",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "72.58",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://school-management-system-production-4f0a.up.railway.app/addSchool",
+					"protocol": "https",
+					"host": [
+						"school-management-system-production-4f0a",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "school-management-system-production-4f0a.up.railway.app/listSchool?latitude=25&longitude=72",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "school-management-system-production-4f0a.up.railway.app/listSchool?latitude=25&longitude=72",
+					"host": [
+						"school-management-system-production-4f0a",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"listSchool"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "25"
+						},
+						{
+							"key": "longitude",
+							"value": "72"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
